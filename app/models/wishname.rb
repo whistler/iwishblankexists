@@ -5,6 +5,6 @@ class Wishname < ActiveRecord::Base
   def cloud_size
     @max ||= Wishname.maximum("wish_count")
     @min ||= Wishname.minimum("wish_count")
-    return 1 + (@max - self.wish_count) * (10-1) / (@max - @min)
+    return 1 + (self.wish_count - 1) * (10-1) / (@max - 1)
   end
 end
