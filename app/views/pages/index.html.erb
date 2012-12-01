@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>iWish___Exists</title>
+        <title>I Wish ___ Exists</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <meta name="description" content="Template by Dry Themes"/>
         <meta name="keywords" content="HTML, CSS, JavaScript, PHP"/>
@@ -31,21 +31,22 @@
                         <%= form_for(@wish) do |f| %>
                         <h1 class="textbox">
                         I wish
-                                    <%= f.text_field :name, :class => "input_box" %> 
+                                    <%= f.text_field :name, :class => "input_box", :placeholder => 'helmet cams for snowboarding' %>
                                     exists
-                                    <%= f.submit "Find out!", :class => "btn btn-large btn-primary"  %>
+                                    <%= f.submit "Submit", :class => "btn btn-large btn-primary"  %>
                         </h1>
-                        <% end %> 
+                              <div class="center">...submit a wish, so someone, somewhere can build it.</div>
+                        <% end %>
                   </div>
                         <div class="clear-left"></div>
                         <div class="clear"></div>
                         <div class="wrapper-mid-content m-top-110">
                               <div class="clear"></div>  
-                              <div class="subheader">   
-                                     <div class="subheader">
-                                          <h3 class="credit">Built at AngelHackTO</h3><br/>
-                                    </div> 
-                              </div>
+                              <!--<div class="subheader">   -->
+                                     <!--<div class="subheader">-->
+                                          <!--<h3 class="credit">Built at AngelHackTO</h3><br/>-->
+                                    <!--</div> -->
+                              <!--</div>-->
                         </div>
                   </div>
             </div>
@@ -65,41 +66,5 @@
                         </p>
                   </div>
             </div>    
-            <div id="subscribe">
-            <div class="subscribe">
-                        <div class="form-text m-left-100 m-top-60">Subscribe</div>
-                <%= image_tag("fill_the_forms.png", :class => "notification-hint", :alt => "Subscribe to be notified")%>
-                        <a class="closePopup" href="javascript: ClosePopupWindow();"><%= image_tag("close.png", :alt => "Close")%></a> 
-                <input type="text" id="subscriberEmail" />
-                <a class="subscribeButton rounded" id="subscribeButton" href="javascript: subscribe();">Subscribe</a>
-                        <div class="clear"></div>
-                <div class="footnote">Be the first to hear our news. No spam - We promise.</div>        
-                  </div>
-        </div>
-        <div id="contact">
-            <div class="contact">
-                        <div class="form-text m-left-50">Contact</div>
-                <%= image_tag("fill_the_forms.png", :class => "fill-the-forms", :alt => "Fill the forms bellow") %>
-                <a class="closePopup" href="javascript: ClosePopupWindow();"><%= image_tag("close.png", :alt => "Close")%></a>
-                <ul class="user-data">
-                    <li>
-                        <input type="text" id="name"/>
-                    </li>
-                    <li>
-                        <input type="text" id="email"/>
-                    </li>
-                    <li>
-                        <input type="text" id="subject"/>
-                    </li>
-                    <li>
-                        <textarea id="message" cols="35" rows="15"></textarea>
-                    </li>
-                    <li>
-                        <a class="submit" id="submitButton" href="javascript: sendMail();">send</a>                    
-                              </li>
-                </ul>
-            </div>
-            </div>
-
       </body>
 </html>

@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>I Wish Blank Exists</title>
+  <title>I Wish ___ Exists</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <script src="https://app.divshot.com/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
-  <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
-  <script type="text/javascript">
-  
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-36714824-1']);
-   _gaq.push(['_trackPageview']);
-  
-   (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js  ';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-  
-  </script>
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
   <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
@@ -32,6 +17,19 @@
    	 <%= yield %>
     <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
  </body>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36714824-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js  ';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
 </html>
 
 
