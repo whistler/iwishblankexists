@@ -15,21 +15,41 @@
 </head>
 <body>
    	 <%= yield %>
+
+    <!-- start of footer -->
+    <div class="clear"></div>
+
+    <div class="footer m-top-70">
+          <div class="socio_contact">
+                <ul>
+                      <li><a href="http://twitter.com/iwishblankexists" target="_blank" class="socio_contact_twitter"></a></li>
+                      <li><a href="http://facebook.com/iwishblankexists" target="_blank" class="socio_contact_facebook"></a></li>
+                </ul>
+          </div>
+          <div class="clear"></div>
+          <div class="copyright">
+                <p>
+                      &copy; Copyright 2012 IWISHBLANKEXISTS
+                </p>
+          </div>
+    </div>
+    <!-- end of footer -->    
     <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+    <!-- start of google analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36714824-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js  ';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <!-- end of google analytics -->
  </body>
-<script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36714824-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js  ';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
 </html>
 
 
