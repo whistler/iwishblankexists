@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
   def index
-    @wishname = Wishname.new
+    @wish = Wish.new(:ip => request.ip)
   end
 
   def result
+    @wishnames = Wishname.all
   end
 
   # def find_out

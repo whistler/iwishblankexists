@@ -26,6 +26,11 @@
 				<!-- <%= image_tag("logo.png", :alt => "image_logo") %>			 -->
 			</div>
 			<div class="wrapper">
+				<% @wishnames.each do |wishname|%>
+				  <span class="cloud cloud-<%= wishname.cloud_size %>">
+				  <%= wishname.name %>(<%= wishname.wish_count %>)
+				  </span>
+				<% end %>
 				<div class="clear-left"></div>
 				<div class="clear"></div>
 				<div class="wrapper-mid-content m-top-110">
@@ -45,9 +50,6 @@
 				<ul>
 					<li><a href="#" target="_blank" class="socio_contact_twitter"></a></li>
 					<li><a href="#" target="_blank" class="socio_contact_facebook"></a></li>
-					<li><a href="#" target="_blank" class="socio_contact_dribbble"></a></li>
-					<li><a href="#" target="_blank" class="socio_contact_behance"></a></li>
-					<li class="last"><a href="#" target="_blank" class="socio_contact_flickr"></a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>

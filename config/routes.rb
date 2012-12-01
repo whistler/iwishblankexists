@@ -4,6 +4,7 @@ Iwishblankexists::Application.routes.draw do
   get "pages/result"
 
   resources :wishnames
+  resources :wishes
 
   get "pages/find_out"
 
