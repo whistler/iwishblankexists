@@ -14,7 +14,7 @@ class WishesController < ApplicationController
   # GET /wishes/1.json
   def show
     @wish = Wish.find(params[:id])
-
+    @wishnames = Wishname.all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @wish }
@@ -44,7 +44,7 @@ class WishesController < ApplicationController
 
     respond_to do |format|
       if @wish.save
-        format.html { redirect_to pages_result_path, notice: 'Wish was successfully created.' }
+        format.html { redirect_to wish_path(@wish.id), notice: 'Wish was successfully created.' }
       else
         format.html { render :back }
       end
@@ -54,11 +54,11 @@ class WishesController < ApplicationController
   # PUT /wishes/1
   # PUT /wishes/1.json
   def update
-    @Wish = Wish.find(params[:id])
+    @wish = Wish.find(params[:id])
 
     respond_to do |format|
       if @wish.update_attributes(params[:Wish])
-        format.html { redirect_to @wish, notice: 'Wish was successfully updated.' }
+        format.html { redirect_to wish_path(@wish), notice: 'You will be emailed when we find a new product' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

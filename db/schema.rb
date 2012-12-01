@@ -11,21 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201191955) do
+ActiveRecord::Schema.define(:version => 20121201220712) do
 
   create_table "wishes", :force => true do |t|
-    t.integer  "wishname_id"
-    t.string   "ip"
-    t.string   "location"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer   "wishname_id"
+    t.string    "ip"
+    t.string    "location"
+    t.timestamp "created_at",  :null => false
+    t.timestamp "updated_at",  :null => false
+    t.string    "email"
   end
 
   create_table "wishnames", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "wish_count"
+    t.string    "name"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
+    t.integer   "wish_count"
   end
 
 end
