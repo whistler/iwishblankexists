@@ -3,6 +3,10 @@ Iwishblankexists::Application.routes.draw do
 
   get "pages/result"
 
+  resources :wishnames
+
+  get "pages/find_out"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

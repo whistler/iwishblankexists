@@ -1,0 +1,23 @@
+<h1>Listing wishnames</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wishnames.each do |wishname| %>
+  <tr>
+    <td><%= wishname.name %></td>
+    <td><%= link_to 'Show', wishname %></td>
+    <td><%= link_to 'Edit', edit_wishname_path(wishname) %></td>
+    <td><%= link_to 'Destroy', wishname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wishname', new_wishname_path %>
