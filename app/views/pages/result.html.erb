@@ -1,5 +1,7 @@
 <% @wishnames.each do |wishname|%>
+  <span class="cloud-<%= wishname.cloud_size %>">
   <%= wishname.name %>
   <%= wishname.wish_count %>
+  </span>
   <br />
 <% end %>
