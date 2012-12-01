@@ -29,9 +29,9 @@ var addEvents = function()
         $('div.popup #message').attachHint('Message:');
     });
 	
-	jQuery('a[rel*=facebox]').facebox({
-		opacity : 0.9
-	});
+	// jQuery('a[rel*=facebox]').facebox({
+	// 	opacity : 0.9
+	// });
 }
 
 var ClosePopupWindow = function()
@@ -44,31 +44,31 @@ var initialize = function()
     var params = {
         'action'    : 'Initialize'
     };
-    $.ajax({
-        type: "POST",
-        url: "php/mainHandler.php",
-        data: params,
-        success: function(response){
-            if(response){
-                var responseObj = jQuery.parseJSON(response);
-                if(responseObj.ResponseData)
-                {
-                    if(responseObj.ResponseData.Start_Date)
-                    {
-                        setInterval(function(){
-                            var countDownObj = calculateTimeDifference(responseObj.ResponseData.Start_Date);
-                            if(countDownObj){
-                                $('#days').text(countDownObj.Days);
-                                $('#hours').text(countDownObj.Hours);
-                                $('#minutes').text(countDownObj.Minutes);
-                                $('#seconds').text(countDownObj.Seconds);
-                            }
-                        }, 1000);
-                    }
-                }
-            }
-        }
-    });
+    // $.ajax({
+    //     type: "POST",
+    //     url: "php/mainHandler.php",
+    //     data: params,
+    //     success: function(response){
+    //         if(response){
+    //             var responseObj = jQuery.parseJSON(response);
+    //             if(responseObj.ResponseData)
+    //             {
+    //                 if(responseObj.ResponseData.Start_Date)
+    //                 {
+    //                     setInterval(function(){
+    //                         var countDownObj = calculateTimeDifference(responseObj.ResponseData.Start_Date);
+    //                         if(countDownObj){
+    //                             $('#days').text(countDownObj.Days);
+    //                             $('#hours').text(countDownObj.Hours);
+    //                             $('#minutes').text(countDownObj.Minutes);
+    //                             $('#seconds').text(countDownObj.Seconds);
+    //                         }
+    //                     }, 1000);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // });
 };
 
 var calculateTimeDifference = function(startDate) {
