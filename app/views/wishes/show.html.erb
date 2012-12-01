@@ -1,0 +1,17 @@
+<div class="well">
+  <center>
+  Enter your email here to get a notification when a new product comes out for <%= @wish.wishname.name %>
+  <%= form_for @wish do |f| %>
+    <%= f.text_field :email %>
+    <%= f.submit 'submit' %>
+  <% end %>
+  </center>
+</div>
+
+<div class="well" style="text-align: center;">
+  <% @wishnames.each do |wishname|%>
+    <span class="cloud cloud-<%= wishname.cloud_size %>">
+    <%= wishname.name %>(<%= wishname.wish_count %>)
+    </span>
+  <% end %>
+</div>

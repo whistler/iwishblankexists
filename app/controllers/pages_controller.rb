@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def result
+    @wish = Wish.find(params[:id])
     @wishnames = Wishname.all
   end
 
