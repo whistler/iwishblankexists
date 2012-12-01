@@ -1,2 +1,5 @@
-<h1>Pages#result</h1>
-<p>Find me in app/views/pages/result.html.erb</p>
+<% @wishnames.each do |wishname|%>
+  <%= wishname.name %>
+  <%= wishname.wish_count %>
+  <br />
+<% end %>
