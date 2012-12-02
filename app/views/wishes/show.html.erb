@@ -1,11 +1,38 @@
-<div class="well">
-  <center>
-  Enter your email here to get a notification when a new product comes out for <%= @wish.wishname.name %>
-  <%= form_for @wish do |f| %>
-    <%= f.text_field :email %>
-    <%= f.submit 'submit' %>
-  <% end %>
-  </center>
+
+<table class="doc-loader">
+  <tr>
+    <td>
+      <%= image_tag("loading.gif", :alt => "loading...")%>
+    </td>
+  </tr>
+</table>
+
+<div class="body_wrapper">
+  <div class="sprite"></div>
+  <div id="header">
+    <br/>
+  </div>
+  <div class="wrapper">
+    <div class="hero-unit splash">
+      </p>
+      <%= form_for(@wish) do |f| %>
+          <h1 class="textbox">
+            OK! Got it
+            <br>
+            <h4>We need your email to tell you when that product comes out!
+             <br>
+             <br>
+            <%= form_for @wish do |f| %>
+                <%= f.text_field :email, :class => "input_box", :placeholder => 'hello@example.com' %>
+                <%= f.submit "Submit", :class => "btn btn-small btn-primary"  %>
+                  <%= link_to "I have another idea!", "http://iwishblankexists.com/", :class => "btn btn-small btn-primary"  %>
+            <% end %>
+            </h4>
+          </h1>
+      <% end %>
+    </div>
+    <div class="clear"></div>
+  </div>
 </div>
 
 <div class="well" style="text-align: center;">
@@ -14,10 +41,12 @@
     <%= wishname.name %>(<%= wishname.wish_count %>)
     </span>
   <% end %>
-  <br>
-  <script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=GEO_MAP_0_0&export=5&w=500&h=530"></script>
-  <script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=TOP_QUERIES_0_0&export=5&w=300&h=420"></script>
-  <br>
-  <script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=500"></script>
-
 </div>
+<div style="text-align: center; margin-left: auto; margin-right: auto; width: 805px ">
+  <div style="float: left;"><script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=GEO_MAP_0_0&export=5&w=500&h=530"></script></div>
+  <div style="float: left;"><script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=TOP_QUERIES_0_0&export=5&w=300&h=420"></script></div>
+  <br>
+  <script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=320"></script>
+</div>
+
+

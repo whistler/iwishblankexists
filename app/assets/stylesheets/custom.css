@@ -90,6 +90,16 @@ h3
 	text-transform: uppercase;
 	color: #cdd4db;
 }
+
+h4
+{
+    /*margin-top: 15px;*/
+    font-size: 10px;
+    /*letter-spacing: -0.05em;*/
+    /*text-transform: uppercase;*/
+    text-align: center;
+    color: #606970;
+}
 .main-image
 {
 	float: right;
