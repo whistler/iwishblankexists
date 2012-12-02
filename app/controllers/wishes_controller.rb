@@ -40,6 +40,7 @@ class WishesController < ApplicationController
   # POST /wishes
   # POST /wishes.json
   def create
+    binding.pry
     @wish = Wish.new(params[:wish])
 
     respond_to do |format|

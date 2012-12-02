@@ -55,7 +55,7 @@ a:hover,
 a:active
 {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     border: none;
     outline: none;
 }
