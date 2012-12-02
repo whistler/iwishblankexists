@@ -2,6 +2,7 @@ Iwishblankexists::Application.routes.draw do
   match 'wish/:id' => 'pages#result', :as => :wish_page
   get "pages/index"
 
+  #match "wishes/php/mainHandler.php" => "pages#index"
   get "pages/result"
 
   resources :wishnames
