@@ -1,8 +1,8 @@
 class Wish < ActiveRecord::Base
-  attr_accessible :ip, :location, :wishname_id, :name
+  attr_accessible :ip, :location, :wishname_id, :name, :email
   belongs_to :wishname, :counter_cache => :wish_count
 
-  before_save :find_wishname
+  before_create :find_wishname
   attr_accessor :name
 
   def find_wishname

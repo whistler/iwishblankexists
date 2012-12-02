@@ -1,9 +1,15 @@
+<h1><%= @wish.wishname.name %></h1>
+
 <div class="well">
   <center>
-  Enter your email here to get a notification when a new product comes out for <%= @wish.wishname.name %>
-  <%= form_for @wish do |f| %>
-    <%= f.text_field :email %>
-    <%= f.submit 'submit' %>
+  <% if @wish.email.blank? %>
+    Enter your email here to get a notification when a new product comes out for <%= @wish.wishname.name %>
+    <%= form_for @wish do |f| %>
+      <%= f.text_field :email %>
+      <%= f.submit 'submit' %>
+    <% end %>
+  <% else %>
+    You will get notification emails for <%= @wish.wishname.name %>
   <% end %>
   </center>
 </div>

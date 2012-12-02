@@ -43,7 +43,7 @@ class WishesController < ApplicationController
     @wish = Wish.new(params[:wish])
 
     respond_to do |format|
-      if @wish.save
+      if @wish.save 
         format.html { redirect_to wish_path(@wish.id), notice: 'Wish was successfully created.' }
       else
         format.html { render :back }
@@ -55,9 +55,8 @@ class WishesController < ApplicationController
   # PUT /wishes/1.json
   def update
     @wish = Wish.find(params[:id])
-
     respond_to do |format|
-      if @wish.update_attributes(params[:Wish])
+      if @wish.update_attributes(params[:wish])
         format.html { redirect_to wish_path(@wish), notice: 'You will be emailed when we find a new product' }
         format.json { head :no_content }
       else
