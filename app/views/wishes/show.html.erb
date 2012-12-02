@@ -14,4 +14,6 @@
     <%= wishname.name %>(<%= wishname.wish_count %>)
     </span>
   <% end %>
+  <br>
+  <script type="text/javascript" src="//www.google.ca/trends/embed.js?hl=en-US&q=<%= URI.encode(@wish.wishname.name) %>&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=500"></script>
 </div>
