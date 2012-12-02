@@ -40,14 +40,13 @@ class WishesController < ApplicationController
   # POST /wishes
   # POST /wishes.json
   def create
-    binding.pry
     @wish = Wish.new(params[:wish])
 
     respond_to do |format|
       if @wish.save 
         format.html { redirect_to wish_path(@wish.id), notice: 'Wish was successfully created.' }
       else
-        format.html { render :back }
+        format.html { redirect_to :back, alert: "Wish can't be blank" }
       end
     end
   end

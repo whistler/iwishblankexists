@@ -15,6 +15,9 @@
 </div>
 
 <div class="well" style="text-align: center;">
+
+  <p>Click on an idea if you wish it existed to vote for it:</p>
+
   <% @wishnames.each do |wishname|%>
     <%= link_to wishes_path(:wish => {:name => wishname.name}), :method => :post do %>
       <span class="cloud cloud-<%= wishname.cloud_size %>">

@@ -1,6 +1,7 @@
 class Wishname < ActiveRecord::Base
   attr_accessible :name
   has_many :wishes
+  validates_presence_of :name
 
   def cloud_size
     @max ||= Wishname.maximum("wish_count")
